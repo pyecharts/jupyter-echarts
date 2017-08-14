@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 FILES = [
 	'./node_modules/echarts/dist/echarts.min.js',
 	'./node_modules/echarts/map/js/china.js',
+	'./node_modules/echarts/map/js/world.js',
 	'./node_modules/echarts/map/js/province/*.js',
 	'./node_modules/echarts-gl/dist/echarts-gl.min.js',
 	'./node_modules/echarts-liquidfill/dist/echarts-liquidfill.min.js',
