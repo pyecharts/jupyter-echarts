@@ -21,7 +21,7 @@ gulp.task("default", function () {
         .js.pipe(gulp.dest("dist"));
 	gulp.src(['dist/main.js'])
 		.pipe(minify({
-			ext: { src: ".js"}
+			ext: { src: ".js", min: ".js"}
 		}))
 		.pipe(gulp.dest('echarts'));
 	return gulp.src(FILES, {base: './node_modules'})
