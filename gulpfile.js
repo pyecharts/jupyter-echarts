@@ -13,7 +13,11 @@ FILES = [
 	'./node_modules/echarts-gl/dist/echarts-gl.min.js',
 	'./node_modules/echarts-liquidfill/dist/echarts-liquidfill.min.js',
 	'./node_modules/echarts-wordcloud/dist/echarts-wordcloud.min.js'
-	]
+]
+
+CITIES = [
+	'world/china/cities/*.js'
+]
 
 gulp.task("default", function () {
 	tsProject.src()
@@ -24,6 +28,9 @@ gulp.task("default", function () {
 			ext: { src: ".js", min: ".js"}
 		}))
 		.pipe(gulp.dest('echarts'));
+	gulp.src(CITIES, {base: './world'})
+		.pipe(rename({dirname: ''}))
+		.pipe(gulp.dest('echarts'))
 	return gulp.src(FILES, {base: './node_modules'})
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('echarts'));

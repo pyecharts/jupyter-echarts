@@ -30,5 +30,7 @@ You will then obtain all echarts libraries in echarts folder.
 
 ## License
 
-This bunding code is MIT license
-The echarts libraries are under BSD-3 license of Baidu Inc. 
+This bundling code is MIT license
+The echarts libraries are under BSD-3 license of Baidu Inc.
+
+The city maps 
