@@ -115,7 +115,7 @@ gulp.task("configuration", function () {
 			var value = obj.FILE_MAP[city]
 			obj.FILE_MAP[city] = value.replace('/', '_').replace('.js', '')
 		}
-		obj.FILEMAP = Object.assign({}, obj.FILEMAP, FILE_MAP);
+		obj.FILE_MAP = Object.assign({}, obj.FILE_MAP, FILE_MAP);
 		obj.PINYIN_MAP = Object.assign({}, obj.PINYIN_MAP, PROVINCE_PINYIN_MAP);
 		fs.writeFile('./echarts/registry.json', JSON.stringify(obj), function (err){
 			if (err) throw err;
