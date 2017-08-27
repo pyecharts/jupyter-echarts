@@ -1,6 +1,6 @@
 {
   "name": "jupyter-echarts",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Bring echarts libraries to jupyter notebooks",
   "main": "main.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "echarts": "3.6.2",
+    "echarts-china-cities-js": "0.0.2",
     "echarts-gl": "^1.0.0-beta.4",
     "echarts-liquidfill": "^1.0.5",
     "echarts-wordcloud": "^1.1.0",
