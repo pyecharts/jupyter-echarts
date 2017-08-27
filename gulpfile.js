@@ -124,7 +124,7 @@ gulp.task("configuration", function () {
 
 });
 
-gulp.task("default", ["cities"], function () {
+gulp.task("default", ["cities", "configuration"], function () {
 	tsProject.src()
         .pipe(tsProject())
         .js.pipe(gulp.dest("dist"));
