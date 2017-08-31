@@ -52,6 +52,7 @@ FILE_MAP = {
     "shandong": "shandong",
     "shanghai": "shanghai",
     "shanxi": "shanxi",
+    "shanxi1": "shanxi1",
     "sichuan": "sichuan",
     "taiwan": "taiwan",
     "tianjin": "tianjin",
@@ -88,6 +89,7 @@ PROVINCE_PINYIN_MAP = {
     "山东": "shandong",
     "上海": "shanghai",
     "山西": "shanxi",
+    "陕西": "shanxi1",
     "四川": "sichuan",
     "台湾": "taiwan",
     "天津": "tianjin",
@@ -117,7 +119,7 @@ gulp.task("configuration", function () {
 		}
 		obj.FILE_MAP = Object.assign({}, obj.FILE_MAP, FILE_MAP);
 		obj.PINYIN_MAP = Object.assign({}, obj.PINYIN_MAP, PROVINCE_PINYIN_MAP);
-		fs.writeFile('./echarts/registry.json', JSON.stringify(obj), function (err){
+		fs.writeFile('./echarts/registry.json', JSON.stringify(obj, null, 4), function (err){
 			if (err) throw err;
 		});
 	});
