@@ -1,6 +1,6 @@
 {
   "name": "jupyter-echarts",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Bring echarts libraries to jupyter notebooks",
   "main": "main.js",
   "scripts": {
