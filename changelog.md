@@ -7,6 +7,10 @@
 #. Reduced echarts maps by 0.1 MB by js minification.
 #. Reduced echarts-china-cities-js by 0.1 MB by js minification.
 
+### Fixed
+
+#. 阿拉善盟地图 failed to register with echarts
+
 ## 1.1.1 - 31.08.2017
 
 ### fixed

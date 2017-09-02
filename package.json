@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "echarts": "3.6.2",
-    "echarts-china-cities-js": "0.0.4",
+    "echarts-china-cities-js": "0.0.5",
     "echarts-gl": "^1.0.0-beta.4",
     "echarts-liquidfill": "^1.0.5",
     "echarts-wordcloud": "^1.1.0",
