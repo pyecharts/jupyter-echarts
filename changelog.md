@@ -1,5 +1,11 @@
 # Change log
 
+## 1.2.2 - 03.09.2017
+
+### Updated
+
+Use old names due backward compactibility concerns.
+
 ## 1.2.1 - 03.09.2017
 
 ### Fixed
