@@ -1,6 +1,13 @@
 # Change log
 
-## 1.2.0 - 31.08.2017
+## 1.2.1 - 03.09.2017
+
+### Fixed
+
+#. wrong pinyin(guandong) for 广东
+#. 阿拉善盟地图 updated
+
+## 1.2.0 - 02.09.2017
 
 ### Updated
 

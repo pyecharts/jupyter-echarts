@@ -30,7 +30,7 @@ FILE_MAP = {
     "world": 'world.min',
     "china": 'china.min',
     "wordcloud": 'echarts-wordcloud.min',
-    "guandong": "guangdong.min",
+    "guangdong": "guangdong.min",
     "anhui": "anhui.min",
     "aomen": "aomen.min",
     "beijing": "beijing.min",
