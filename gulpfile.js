@@ -30,40 +30,40 @@ FILE_MAP = {
     "world": 'world.min',
     "china": 'china.min',
     "wordcloud": 'echarts-wordcloud.min',
-    "guandong": "guangdong.min",
-    "anhui": "anhui.min",
-    "aomen": "aomen.min",
-    "beijing": "beijing.min",
-    "chongqing": "chongqing.min",
-    "fujian": "fujian.min",
-    "gansu": "gansu.min",
-    "guangxi": "guangxi.min",
-    "guizhou": "guizhou.min",
-    "hainan": "hainan.min",
-    "hebei": "hebei.min",
-    "heilongjiang": "heilongjiang.min",
-    "henan": "henan.min",
-    "hebei": "hubei.min",
-    "hunan": "hunan.min",
-    "jiangsu": "jiangsu.min",
-    "jiangxi": "jiangxi.min",
-    "jilin": "jilin.min",
-    "liaoning": "liaoning.min",
-    "neimenggu": "neimenggu.min",
-    "ningxia": "ningxia.min",
-    "qinghai": "qinghai.min",
-    "shandong": "shandong.min",
-    "shanghai": "shanghai.min",
-    "shanxi": "shanxi.min",
-    "shanxi1": "shanxi1.min",
-    "sichuan": "sichuan.min",
-    "taiwan": "taiwan.min",
-    "tianjin": "tianjin.min",
-    "xianggang": "xianggang.min",
-    "xinjiang": "xinjiang.min",
-    "xizang": "xizang.min",
-    "yunnan": "yunnan.min",
-    "zhejiang": "zhejiang.min"
+    "guangdong": "guangdong",
+    "anhui": "anhui",
+    "aomen": "aomen",
+    "beijing": "beijing",
+    "chongqing": "chongqing",
+    "fujian": "fujian",
+    "gansu": "gansu",
+    "guangxi": "guangxi",
+    "guizhou": "guizhou",
+    "hainan": "hainan",
+    "hebei": "hebei",
+    "heilongjiang": "heilongjiang",
+    "henan": "henan",
+    "hebei": "hubei",
+    "hunan": "hunan",
+    "jiangsu": "jiangsu",
+    "jiangxi": "jiangxi",
+    "jilin": "jilin",
+    "liaoning": "liaoning",
+    "neimenggu": "neimenggu",
+    "ningxia": "ningxia",
+    "qinghai": "qinghai",
+    "shandong": "shandong",
+    "shanghai": "shanghai",
+    "shanxi": "shanxi",
+    "shanxi1": "shanxi1",
+    "sichuan": "sichuan",
+    "taiwan": "taiwan",
+    "tianjin": "tianjin",
+    "xianggang": "xianggang",
+    "xinjiang": "xinjiang",
+    "xizang": "xizang",
+    "yunnan": "yunnan",
+    "zhejiang": "zhejiang"
 }
 
 PROVINCE_PINYIN_MAP = {
@@ -107,8 +107,13 @@ gulp.task("echarts-maps", function(){
     gulp.src(ECHARTS_BUILTIN_MAPS, {base: './node_modules'})
         .pipe(rename({dirname: ''}))
 	.pipe(minify({
+<<<<<<< HEAD
             noSource: true,
 	    ext: { min: ".min.js"}
+=======
+        noSource: true,
+	    ext: { min: ".js"}
+>>>>>>> f5bfa990ca7fd748f8ed0dd3eb8bce8210571765
 	}))
 	.pipe(gulp.dest('echarts'));
   
