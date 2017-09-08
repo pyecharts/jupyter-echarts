@@ -107,7 +107,7 @@ gulp.task("echarts-maps", function(){
     gulp.src(ECHARTS_BUILTIN_MAPS, {base: './node_modules'})
         .pipe(rename({dirname: ''}))
 	.pipe(minify({
-        noSource: true,
+            noSource: true,
 	    ext: { min: ".js"}
 	}))
 	.pipe(gulp.dest('echarts'));
