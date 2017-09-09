@@ -3,6 +3,14 @@
 It integrates echarts to jupyter notebook as nbextensions and echarts libraries will be served from http://localhost:8888/nbextensions/echarts/.
 
 
+## Content
+
+1. echarts
+1. echarts-gl
+1. echarts-liquidfill
+1. echarts-wordcloud
+1. echarts maps: world, china, 28 province maps, 369 city maps.
+
 ## Installation
 
 ```shell
