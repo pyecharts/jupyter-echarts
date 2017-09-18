@@ -15,7 +15,6 @@ FILES = [
 
 ECHARTS_BUILTIN_MAPS = [
     './node_modules/echarts/map/js/china.js',
-    './node_modules/echarts/map/js/world.js',
     './node_modules/echarts/map/js/province/*.js',
 ]
 
