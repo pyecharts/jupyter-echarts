@@ -1,6 +1,12 @@
 # Change log
 
 
+## 1.2.4 - 19.09.2017
+
+### Updated
+
+minize world.js too.
+
 ## 1.2.3 - 18.09.2017
 
 ### Updated
