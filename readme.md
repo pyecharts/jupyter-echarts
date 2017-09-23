@@ -3,7 +3,7 @@
 It integrates echarts to jupyter notebook as nbextensions and echarts libraries will be served from http://localhost:8888/nbextensions/echarts/.
 
 
-It is embedded in [pyecharts]((https://github.com/chenjiandongx/pyecharts) v 0.1.9.5+. No action is required from pyecharts users.
+It is embedded in [pyecharts](https://github.com/chenjiandongx/pyecharts) v0.1.9.5+. No action is required from pyecharts users.
 
 ## Content
 
@@ -74,4 +74,19 @@ You will then obtain all echarts libraries in echarts folder.
 This bundling code is MIT license
 The echarts libraries are under BSD-3 license of Baidu Inc.
 
-The city maps 
+
+### City maps License
+
+The geojson files are downloaded from AMap.com(高德地图) via [echarts-map-tool](http://ecomfe.github.io/echarts-map-tool/),
+hence are subjected to AMap's [service and content license](https://lbs.amap.com/home/terms/).
+
+**No content right** have been transferred to you and you shall **engage AMap.com** before
+making commercial applications using the files in this package. No Liability nor Guarantee were
+given for any error or flaws in the downloaded files.
+
+#### Free usage instructions
+
+Similiar to google's map data, it is free as long as the public's access to your files
+are free. 
+
+This bundling code(makedemo.py) is MIT license.
