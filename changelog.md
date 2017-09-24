@@ -1,5 +1,24 @@
 # Change log
 
+## 1.3.0 - 25.09.2017
+
+### Added
+
+212 Countries and Regions.
+
+## 1.2.4 - 19.09.2017
+
+### Updated
+
+minize world.js too.
+
+## 1.2.3 - 18.09.2017
+
+### Updated
+
+world.js is now compressed. Total size reduction is, 844K, 85% compression rate.
+No loss of precision. reference: [PR 6693] (https://github.com/ecomfe/echarts/pull/6693)
+
 ## 1.2.2 - 03.09.2017
 
 ### Updated
