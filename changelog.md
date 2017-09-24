@@ -1,5 +1,10 @@
 # Change log
 
+## 1.3.0 - 25.09.2017
+
+### Added
+
+212 Countries and Regions.
 
 ## 1.2.4 - 19.09.2017
 
