@@ -1,6 +1,8 @@
 var gulp = require("gulp");
 var ts = require("gulp-typescript");
 var fs = require("fs");
+const pug = require("pug");
+const path = require("path");
 var tsProject = ts.createProject("tsconfig.json");
 var minify = require("gulp-minify");
 var rename = require('gulp-rename');
@@ -14,8 +16,9 @@ FILES = [
 ]
 
 ECHARTS_BUILTIN_MAPS = [
-    './node_modules/echarts/map/js/china.js',
-    './node_modules/echarts/map/js/province/*.js',
+  './node_modules/echarts/map/js/china.js',
+  './node_modules/echarts/map/js/province/*.js',
+  './optimized-world-js/world.js'
 ]
 
 CITIES = [
@@ -23,6 +26,7 @@ CITIES = [
 ]
 
 COUNTRIES = [
+  '!./node_modules/echarts-countries-js/dist/China.js',
   './node_modules/echarts-countries-js/dist/*.js'
 ]
 
@@ -107,14 +111,14 @@ PROVINCE_PINYIN_MAP = {
 }
 
 gulp.task("echarts-maps", function(){
-    gulp.src(ECHARTS_BUILTIN_MAPS, {base: './node_modules'})
-        .pipe(rename({dirname: ''}))
+  gulp.src(ECHARTS_BUILTIN_MAPS)
+    .pipe(rename({dirname: ''}))
 	.pipe(minify({
-            noSource: true,
-	    ext: { min: ".js"}
+      noSource: true,
+	  ext: { min: ".js"}
 	}))
 	.pipe(gulp.dest('echarts'));
-  
+
 });
 
 gulp.task("cities", function (){
@@ -129,8 +133,8 @@ gulp.task("cities", function (){
 gulp.task("countries", function (){
     gulp.src(COUNTRIES, {base: './node_modules/echarts-countries-js/dist'})
 	.pipe(minify({
-            noSource: true,
-	    ext: { min: ".js"}
+      noSource: true,
+	  ext: { min: ".js"}
 	}))
 	.pipe(gulp.dest('echarts'));
 });
@@ -152,7 +156,20 @@ gulp.task("configuration", function () {
 
 });
 
-gulp.task("default", ["echarts-maps", "cities", "countries", "configuration"], function () {
+gulp.task("preview", function(){
+  var index = pug.compileFile(path.join("templates", "preview.pug"));
+  var provinces = Object.keys(PROVINCE_PINYIN_MAP);
+  provinces.push('china');
+  provinces.push('world');
+  var options = {
+    countryFiles:  Object.values(FILE_MAP),
+    countries: provinces};
+  fs.writeFile('preview.html', index(options), function(err){
+    if(err) throw err;
+  });
+});
+
+gulp.task("default", ["echarts-maps", "cities", "countries", "configuration", "preview"], function () {
     tsProject.src()
         .pipe(tsProject())
         .js.pipe(gulp.dest("dist"));
