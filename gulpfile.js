@@ -6,7 +6,7 @@ const path = require("path");
 var tsProject = ts.createProject("tsconfig.json");
 var minify = require("gulp-minify");
 var rename = require('gulp-rename');
-
+var maker = require("./node_modules/echarts-mapmaker/src/maker");
 
 FILES = [
     './node_modules/echarts/dist/echarts.min.js',
@@ -167,6 +167,11 @@ gulp.task("preview", function(){
   fs.writeFile('preview.html', index(options), function(err){
     if(err) throw err;
   });
+});
+
+gulp.task("fix-hebei", function(){
+  maker.compress("./node_modules/echarts/map/json/province/hebei.json",
+				 "./echarts/hebei.js", "河北");
 });
 
 gulp.task("default", ["echarts-maps", "cities", "countries", "configuration", "preview"], function () {
