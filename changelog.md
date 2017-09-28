@@ -1,5 +1,14 @@
 # Change log
 
+## 1.3.1 - 28.09.2017
+
+###Fixed
+
+1. [#4](https://github.com/chfw/jupyter-echarts/issues/4) hebei map is missing
+1. [#6](https://github.com/chfw/jupyter-echarts/issues/6) hubei map is missing too
+1. [#3](https://github.com/chfw/jupyter-echarts/issues/3) China map is fixed due to
+   the regression caused by 1.3.0.
+
 ## 1.3.0 - 25.09.2017
 
 ### Added

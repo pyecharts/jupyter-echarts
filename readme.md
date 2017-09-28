@@ -11,7 +11,8 @@ It is embedded in [pyecharts](https://github.com/chenjiandongx/pyecharts) v0.1.9
 1. echarts-gl
 1. echarts-liquidfill
 1. echarts-wordcloud
-1. echarts maps: world, china, 28 province maps, 369 city maps.
+1. echarts-china-cities-js: World, China, 28 province maps, 369 city maps.
+1. echarts-countries-js: 212 countries excluding China
 
 ## Installation to jupyter
 
