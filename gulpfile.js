@@ -50,7 +50,7 @@ FILE_MAP = {
     "hebei": "hebei",
     "heilongjiang": "heilongjiang",
     "henan": "henan",
-    "hebei": "hubei",
+    "hebei": "hebei",
     "hunan": "hunan",
     "jiangsu": "jiangsu",
     "jiangxi": "jiangxi",
@@ -170,8 +170,8 @@ gulp.task("preview", function(){
 });
 
 gulp.task("fix-hebei", function(){
-  maker.compress("./node_modules/echarts/map/json/province/hebei.json",
-				 "./echarts/hebei.js", "河北");
+  maker.compress("./node_modules/echarts/map/json/china-cities.json",
+		 "./echarts/hebei.js", "河北");
 });
 
 gulp.task("default", ["echarts-maps", "cities", "countries", "configuration", "preview"], function () {
