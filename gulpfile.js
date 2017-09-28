@@ -50,7 +50,7 @@ FILE_MAP = {
     "hebei": "hebei",
     "heilongjiang": "heilongjiang",
     "henan": "henan",
-    "hebei": "hebei",
+    "hubei": "hubei",
     "hunan": "hunan",
     "jiangsu": "jiangsu",
     "jiangxi": "jiangxi",
