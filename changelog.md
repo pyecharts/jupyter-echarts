@@ -1,5 +1,11 @@
 # Change log
 
+## 1.3.2 - 12.11.2017
+
+###Fixed
+
+1. [#7](https://github.com/chfw/jupyter-echarts/issues/7) shan nan city map is missing from xi zang map
+
 ## 1.3.1 - 28.09.2017
 
 ###Fixed

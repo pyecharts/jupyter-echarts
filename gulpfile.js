@@ -17,8 +17,10 @@ FILES = [
 
 ECHARTS_BUILTIN_MAPS = [
   './node_modules/echarts/map/js/china.js',
+  '!./node_modules/echarts/map/js/province/xizang.js',
   './node_modules/echarts/map/js/province/*.js',
-  './optimized-world-js/world.js'
+  './optimized-world-js/world.js',
+  './updated-xizang/xizang.js'
 ]
 
 CITIES = [
