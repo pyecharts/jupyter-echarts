@@ -1,5 +1,11 @@
 # Change log
 
+## 1.3.3 - 16.11.2017
+
+###Fixed
+
+1. [#9](https://github.com/chfw/jupyter-echarts/issues/9) shanghai got chongming in 2015
+
 ## 1.3.2 - 12.11.2017
 
 ###Fixed
