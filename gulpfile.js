@@ -6,7 +6,7 @@ const path = require("path");
 var tsProject = ts.createProject("tsconfig.json");
 var minify = require("gulp-minify");
 var rename = require('gulp-rename');
-var maker = require("./node_modules/echarts-mapmaker/src/maker");
+var maker = require("echarts-mapmaker/src/maker");
 
 FILES = [
     './node_modules/echarts/dist/echarts.min.js',
@@ -18,6 +18,7 @@ FILES = [
 ECHARTS_BUILTIN_MAPS = [
   './node_modules/echarts/map/js/china.js',
   '!./node_modules/echarts/map/js/province/xizang.js',
+  '!./node_modules/echarts/map/js/province/shanghai.js',
   './node_modules/echarts/map/js/province/*.js',
   './optimized-world-js/world.js',
   './updated-xizang/xizang.js'
@@ -171,12 +172,21 @@ gulp.task("preview", function(){
   });
 });
 
-gulp.task("fix-hebei", function(){
-  maker.compress("./node_modules/echarts/map/json/china-cities.json",
-		 "./echarts/hebei.js", "河北");
+// fix issue 9
+gulp.task("chongming", function(){
+  maker.merge('shanghai-chongming/shanghai-without-chongming.json',
+              'shanghai-chongming/chongming.json');
+  maker.compress('merged_shanghai-without-chongming.json', './dist/shanghai.js', '上海');
+  gulp.src('./dist/shanghai.js', {base: './dist'})
+	.pipe(minify({
+      noSource: true,
+	  ext: { min: ".js"}
+	}))
+	.pipe(gulp.dest('echarts'));
+
 });
 
-gulp.task("default", ["echarts-maps", "cities", "countries", "configuration", "preview"], function () {
+gulp.task("default", ["chongming", "echarts-maps", "cities", "countries", "configuration", "preview"], function () {
     tsProject.src()
         .pipe(tsProject())
         .js.pipe(gulp.dest("dist"));
