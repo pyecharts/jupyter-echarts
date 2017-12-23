@@ -19,6 +19,7 @@ ECHARTS_BUILTIN_MAPS = [
   './node_modules/echarts/map/js/china.js',
   '!./node_modules/echarts/map/js/province/xizang.js',
   '!./node_modules/echarts/map/js/province/shanghai.js',
+  '!./node_modules/echarts/map/js/province/taiwan.js',   // not to use default tai wan map
   './node_modules/echarts/map/js/province/*.js',
   './optimized-world-js/world.js',
   './updated-xizang/xizang.js'
@@ -73,7 +74,8 @@ FILE_MAP = {
     "xinjiang": "xinjiang",
     "xizang": "xizang",
     "yunnan": "yunnan",
-    "zhejiang": "zhejiang"
+    "zhejiang": "zhejiang",
+    "diaoyudao": "diaoyudao"
 }
 
 PROVINCE_PINYIN_MAP = {
@@ -110,7 +112,8 @@ PROVINCE_PINYIN_MAP = {
     "新疆": "xinjiang",
     "西藏": "xizang",
     "云南": "yunnan",
-    "浙江": "zhejiang"
+    "浙江": "zhejiang",
+    "钓鱼岛": "diaoyudao"
 }
 
 gulp.task("echarts-maps", function(){
@@ -176,7 +179,7 @@ gulp.task("preview", function(){
 gulp.task("chongming", function(){
   maker.merge('shanghai-chongming/shanghai-without-chongming.json',
               'shanghai-chongming/chongming.json');
-  maker.compress('merged_shanghai-without-chongming.json', './dist/shanghai.js', '上海');
+  maker.makeJs('merged_shanghai-without-chongming.json', './dist/shanghai.js', '上海');
   gulp.src('./dist/shanghai.js', {base: './dist'})
 	.pipe(minify({
       noSource: true,
@@ -186,7 +189,33 @@ gulp.task("chongming", function(){
 
 });
 
-gulp.task("default", ["chongming", "echarts-maps", "cities", "countries", "configuration", "preview"], function () {
+// use custom tai wan map
+gulp.task("taiwan", function(){
+  maker.merge('taiwan/taiwan.json',
+              'taiwan/diaoyudao.json');
+  maker.makeJs('merged_taiwan.json', './dist/taiwan.js', '台湾');
+  gulp.src('./dist/taiwan.js', {base: './dist'})
+	.pipe(minify({
+      noSource: true,
+	  ext: { min: ".js"}
+	}))
+	.pipe(gulp.dest('echarts'));
+
+});
+
+// produce diaoyudao
+gulp.task("diaoyudao", function(){
+  maker.makeJs('taiwan/diaoyudao.json', './dist/diaoyudao.js', '钓鱼岛');
+  gulp.src('./dist/diaoyudao.js', {base: './dist'})
+	.pipe(minify({
+      noSource: true,
+	  ext: { min: ".js"}
+	}))
+	.pipe(gulp.dest('echarts'));
+
+});
+
+gulp.task("default", ["chongming", "taiwan", "diaoyudao", "echarts-maps", "cities", "countries", "configuration", "preview"], function () {
     tsProject.src()
         .pipe(tsProject())
         .js.pipe(gulp.dest("dist"));

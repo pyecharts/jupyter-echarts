@@ -608,7 +608,8 @@
         "新疆": "xinjiang",
         "西藏": "xizang",
         "云南": "yunnan",
-        "浙江": "zhejiang"
+        "浙江": "zhejiang",
+        "钓鱼岛": "diaoyudao"
     },
     "FILE_MAP": {
         "an1_qing4": "an1_hui1_an1_qing4",
@@ -1226,6 +1227,7 @@
         "xinjiang": "xinjiang",
         "xizang": "xizang",
         "yunnan": "yunnan",
-        "zhejiang": "zhejiang"
+        "zhejiang": "zhejiang",
+        "diaoyudao": "diaoyudao"
     }
 }

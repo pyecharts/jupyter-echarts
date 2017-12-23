@@ -1,5 +1,12 @@
 # Change log
 
+## 1.3.4 - 23.12.2017
+
+###Added
+
+1. Added Detailed Taiwan map, inline with other provinces
+2. Added Diaoyu Island
+
 ## 1.3.3 - 16.11.2017
 
 ###Fixed
