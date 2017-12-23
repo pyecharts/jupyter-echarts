@@ -75,7 +75,7 @@ FILE_MAP = {
     "xizang": "xizang",
     "yunnan": "yunnan",
     "zhejiang": "zhejiang",
-    "diaoyudao": "diaoyudao"
+    "diaoyudao": "diao4yu2dao3"
 }
 
 PROVINCE_PINYIN_MAP = {
@@ -205,8 +205,8 @@ gulp.task("taiwan", function(){
 
 // produce diaoyudao
 gulp.task("diaoyudao", function(){
-  maker.makeJs('taiwan/diaoyudao.json', './dist/diaoyudao.js', '钓鱼岛');
-  gulp.src('./dist/diaoyudao.js', {base: './dist'})
+  maker.makeJs('taiwan/diaoyudao.json', './dist/diao4yu2dao3.js', '钓鱼岛');
+  gulp.src('./dist/diao4yu2dao3.js', {base: './dist'})
 	.pipe(minify({
       noSource: true,
 	  ext: { min: ".js"}
