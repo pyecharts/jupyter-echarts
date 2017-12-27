@@ -24,6 +24,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-typescript": "^3.2.1",
     "pug": "^2.0.0-rc.4",
+    "require-dir": "^0.3.2",
     "typescript": "^2.4.2"
   }
 }

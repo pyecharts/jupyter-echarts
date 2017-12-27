@@ -1,4 +1,9 @@
-var gulp = require("gulp");
+var gulp = require('gulp');
+
+// all gulp tasks are located in the ./build/tasks directory
+// gulp configuration is in files in ./build directory
+require('require-dir')('build/tasks');
+
 var ts = require("gulp-typescript");
 var fs = require("fs");
 const pug = require("pug");
@@ -23,10 +28,6 @@ ECHARTS_BUILTIN_MAPS = [
   './node_modules/echarts/map/js/province/*.js',
   './optimized-world-js/world.js',
   './updated-xizang/xizang.js'
-]
-
-CITIES = [
-    './node_modules/echarts-china-cities-js/dist/**/*.js'
 ]
 
 COUNTRIES = [
@@ -125,15 +126,6 @@ gulp.task("echarts-maps", function(){
 	}))
 	.pipe(gulp.dest('echarts'));
 
-});
-
-gulp.task("cities", function (){
-    gulp.src(CITIES, {base: './node_modules/echarts-china-cities-js/dist'})
-	.pipe(rename(function (path){
-	    path.basename = path.dirname + '_' + path.basename;
-	    path.dirname = '';
-	}))
-	.pipe(gulp.dest('echarts'));
 });
 
 gulp.task("countries", function (){
