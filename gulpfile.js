@@ -172,18 +172,6 @@ gulp.task("chongming", function(){
 
 });
 
-// produce diaoyudao
-gulp.task("diaoyudao", function(){
-  maker.makeJs('taiwan/diaoyudao.json', './dist/diao4yu2dao3.js', '钓鱼岛');
-  gulp.src('./dist/diao4yu2dao3.js', {base: './dist'})
-	.pipe(minify({
-      noSource: true,
-	  ext: { min: ".js"}
-	}))
-	.pipe(gulp.dest('echarts'));
-
-});
-
 gulp.task("default", ["chongming", "taiwan", "diaoyudao", "echarts-maps", "cities", "countries", "configuration", "preview"], function () {
     tsProject.src()
         .pipe(tsProject())
