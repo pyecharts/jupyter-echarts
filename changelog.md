@@ -1,5 +1,11 @@
 # Change log
 
+## 1.3.5 - unreleased
+
+1. Chongqing city: Added kai zhou qu (开州区) 
+
+###Added
+
 ## 1.3.4 - 23.12.2017
 
 ###Added
