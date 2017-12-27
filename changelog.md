@@ -1,8 +1,12 @@
 # Change log
 
-## 1.3.5 - unreleased
+## 1.3.6 - unreleased
 
-1. Chongqing city: Added kai zhou qu (开州区) 
+1. Kai zhou district is added to Chong Qing City.
+
+## 1.3.5 - 23.12.2017
+
+1. Taoyuan xian is updated as Taoyuan City
 
 ###Added
 
