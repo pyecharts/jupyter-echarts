@@ -30,11 +30,6 @@ ECHARTS_BUILTIN_MAPS = [
   './updated-xizang/xizang.js'
 ]
 
-COUNTRIES = [
-  '!./node_modules/echarts-countries-js/dist/China.js',
-  './node_modules/echarts-countries-js/dist/*.js'
-]
-
 FILE_MAP = {
     "echarts": 'echarts.min',
     "echartsgl": 'echarts-gl.min',
@@ -156,20 +151,6 @@ gulp.task("preview", function(){
   fs.writeFile('preview.html', index(options), function(err){
     if(err) throw err;
   });
-});
-
-// fix issue 9
-gulp.task("chongming", function(){
-  maker.merge('shanghai-chongming/shanghai-without-chongming.json',
-              'shanghai-chongming/chongming.json');
-  maker.makeJs('merged_shanghai-without-chongming.json', './dist/shanghai.js', '上海');
-  gulp.src('./dist/shanghai.js', {base: './dist'})
-	.pipe(minify({
-      noSource: true,
-	  ext: { min: ".js"}
-	}))
-	.pipe(gulp.dest('echarts'));
-
 });
 
 gulp.task("default", ["chongming", "taiwan", "diaoyudao", "echarts-maps", "cities", "countries", "configuration", "preview"], function () {
