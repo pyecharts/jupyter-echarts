@@ -128,15 +128,6 @@ gulp.task("echarts-maps", function(){
 
 });
 
-gulp.task("countries", function (){
-    gulp.src(COUNTRIES, {base: './node_modules/echarts-countries-js/dist'})
-	.pipe(minify({
-      noSource: true,
-	  ext: { min: ".js"}
-	}))
-	.pipe(gulp.dest('echarts'));
-});
-
 gulp.task("configuration", function () {
   var data = fs.readFileSync('./node_modules/echarts-china-cities-js/dist/config.json', 'utf8');
   var obj = JSON.parse(data);
