@@ -805,5 +805,7 @@
         "yunnan": "yunnan",
         "zhejiang": "zhejiang",
         "diaoyudao": "diao4yu2dao3"
-    }
+    },
+    "JUPYTER_URL": "/nbextensions/echarts",
+    "GITHUB_URL": "https://pyecharts.github.io/jupyter-echarts/echarts"
 }

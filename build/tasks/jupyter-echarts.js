@@ -130,6 +130,8 @@ gulp.task("configuration", function () {
   }
   obj.FILE_MAP = Object.assign({}, obj.FILE_MAP, FILE_MAP);
   obj.PINYIN_MAP = Object.assign({}, obj.PINYIN_MAP, PROVINCE_PINYIN_MAP);
+  obj.JUPYTER_URL = '/nbextensions/echarts';
+  obj.GITHUB_URL = 'https://pyecharts.github.io/jupyter-echarts/echarts'
   fs.writeFile('./echarts/registry.json', JSON.stringify(obj, null, 4), function (err){
     if (err) throw err;
   });
