@@ -18,13 +18,8 @@ FILES = [
 
 ECHARTS_BUILTIN_MAPS = [
   './node_modules/echarts/map/js/china.js',
-  '!./node_modules/echarts/map/js/province/xizang.js',
-  '!./node_modules/echarts/map/js/province/shanghai.js',
-  '!./node_modules/echarts/map/js/province/chongqing.js',
-  '!./node_modules/echarts/map/js/province/xinjiang.js',
-  '!./node_modules/echarts/map/js/province/taiwan.js',   // not to use default tai wan map
+  './node_modules/echarts/map/js/world.js',
   './node_modules/echarts/map/js/province/*.js',
-  './optimized-world-js/world.js',
   './updated-xizang/xizang.js'
 ]
 
