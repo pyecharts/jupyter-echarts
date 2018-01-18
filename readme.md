@@ -91,3 +91,13 @@ Similiar to google's map data, it is free as long as the public's access to your
 are free. 
 
 This bundling code(makedemo.py) is MIT license.
+
+
+#### Exception on the map license
+
+1. Taiwan map, is taken from [natural earth](http://www.naturalearthdata.com/about/terms-of-use/) and hence is
+in public domain. Again, No Liability nor Guarantee were given for any error or flaws by Natural Earth or by
+this project.
+
+2. Diaoyudao map, is drawn using from [geojson.io](geojson.io) and is in public domain. No Liability nor
+Guarantee were given for any error or flaws by this project.

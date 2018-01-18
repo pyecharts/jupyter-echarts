@@ -9,21 +9,21 @@
   "author": "C. W.",
   "license": "MIT",
   "dependencies": {
-    "echarts": "3.8.5",
-    "echarts-china-cities-js": "0.0.7",
-    "echarts-countries-js": "^1.0.2",
-    "echarts-gl": "^1.0.0-beta.6",
+    "echarts": "^4.0.2",
+    "echarts-china-cities-js": "^0.0.9",
+    "echarts-gl": "^1.0.0",
     "echarts-liquidfill": "^1.1.1",
     "echarts-wordcloud": "^1.1.2",
     "requirejs": "^2.3.4"
   },
   "devDependencies": {
-    "echarts-mapmaker": "^1.0.5",
+    "echarts-mapmaker": "^1.0.10",
     "gulp": "^3.9.1",
     "gulp-minify": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-typescript": "^3.2.1",
     "pug": "^2.0.0-rc.4",
+    "require-dir": "^0.3.2",
     "typescript": "^2.4.2"
   }
 }
