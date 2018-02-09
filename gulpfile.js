@@ -11,8 +11,6 @@ const TASKS = [
   "taiwan",
   "diaoyudao",
   "echarts-maps",
-  "cities",
-  "countries",
   "configuration",
   "preview",
   "main"
