@@ -124,15 +124,17 @@ gulp.task("echarts-maps", function(){
 gulp.task("configuration", function () {
   var data = fs.readFileSync('./node_modules/echarts-china-cities-js/dist/config.json', 'utf8');
   var obj = JSON.parse(data);
-  var countries = fs.readFileSync('./node_modules/echarts-countries-js/dist/config.json', 'utf8');
-  var countryRegistry = JSON.parse(countries);
   for (var city in obj.FILE_MAP){
     var value = obj.FILE_MAP[city]
     obj.FILE_MAP[city] = value.replace('/', '_').replace('.js', '')
   }
-  obj.FILE_MAP = Object.assign({}, obj.FILE_MAP, countryRegistry.FILE_MAP, FILE_MAP);
-  obj.PINYIN_MAP = Object.assign({}, obj.PINYIN_MAP, countryRegistry.PINYIN_MAP, PROVINCE_PINYIN_MAP);
-  fs.writeFile('./echarts/registry.json', JSON.stringify(obj, null, 4), function (err){
+  obj.FILE_MAP = Object.assign({}, obj.FILE_MAP, FILE_MAP);
+  obj.PINYIN_MAP = Object.assign({}, obj.PINYIN_MAP, PROVINCE_PINYIN_MAP);
+  obj.JUPYTER_URL = '/nbextensions/echarts';
+  obj.JUPYTER_ENTRY = 'echarts/main';
+  obj.JS_FOLDER = 'echarts';
+  obj.GITHUB_URL = 'https://pyecharts.github.io/jupyter-echarts/echarts'
+  fs.writeFile('./registry.json', JSON.stringify(obj, null, 4), function (err){
     if (err) throw err;
   });
 

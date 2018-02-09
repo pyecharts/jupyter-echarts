@@ -3,7 +3,7 @@
 It integrates echarts to jupyter notebook as nbextensions and echarts libraries will be served from http://localhost:8888/nbextensions/echarts/.
 
 
-It is embedded in [pyecharts](https://github.com/pyecharts/pyecharts) v0.1.9.5+. No action is required from pyecharts users.
+No action is required from pyecharts users. It is auto-installed in [pyecharts](https://github.com/pyecharts/pyecharts) v0.3.2+ and was embedded in [pyecharts](https://github.com/pyecharts/pyecharts) v0.1.9.5+. 
 
 ## Content
 
@@ -99,5 +99,5 @@ This bundling code(makedemo.py) is MIT license.
 in public domain. Again, No Liability nor Guarantee were given for any error or flaws by Natural Earth or by
 this project.
 
-2. Diaoyudao map, is drawn using from [geojson.io](geojson.io) and is in public domain. No Liability nor
+2. Diaoyudao map, is drawn using [geojson.io](geojson.io) and is in public domain. No Liability nor
 Guarantee were given for any error or flaws by this project.
