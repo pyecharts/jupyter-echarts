@@ -122,12 +122,7 @@ gulp.task("echarts-maps", function(){
 });
 
 gulp.task("configuration", function () {
-  var data = fs.readFileSync('./node_modules/echarts-china-cities-js/dist/config.json', 'utf8');
-  var obj = JSON.parse(data);
-  for (var city in obj.FILE_MAP){
-    var value = obj.FILE_MAP[city]
-    obj.FILE_MAP[city] = value.replace('/', '_').replace('.js', '')
-  }
+  obj = {};
   obj.FILE_MAP = Object.assign({}, obj.FILE_MAP, FILE_MAP);
   obj.PINYIN_MAP = Object.assign({}, obj.PINYIN_MAP, PROVINCE_PINYIN_MAP);
   obj.JUPYTER_URL = '/nbextensions/echarts';
