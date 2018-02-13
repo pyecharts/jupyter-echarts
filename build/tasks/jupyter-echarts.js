@@ -128,8 +128,8 @@ gulp.task("configuration", function () {
   obj.JUPYTER_URL = '/nbextensions/echarts';
   obj.JUPYTER_ENTRY = 'echarts/main';
   obj.JS_FOLDER = 'echarts';
-  obj.GITHUB_URL = 'https://pyecharts.github.io/jupyter-echarts/echarts'
-  fs.writeFile('./registry.json', JSON.stringify(obj, null, 4), function (err){
+  obj.GITHUB_URL = 'https://pyecharts.github.io/jupyter-echarts/echarts';
+  fs.writeFile('./echarts/registry.json', JSON.stringify(obj, null, 4), function (err){
     if (err) throw err;
   });
 
