@@ -1,5 +1,10 @@
 # Change log
 
+## 1.3.7 - unreleased
+
+### Removed
+1. all map js files.
+
 ## 1.3.6 - 03.02.2017
 
 ###Added

@@ -5,14 +5,7 @@ var gulp = require('gulp');
 require('require-dir')('build/tasks');
 
 const TASKS = [
-  "hamishi",
-  "kaizhouqu",
-  "chongming",
-  "taiwan",
-  "diaoyudao",
-  "echarts-maps",
   "configuration",
-  "preview",
   "main"
 ];
 
