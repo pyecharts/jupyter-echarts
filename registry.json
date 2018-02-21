@@ -1,0 +1,8 @@
+{
+    "FILE_MAP": {},
+    "PINYIN_MAP": {},
+    "JUPYTER_URL": "/nbextensions/echarts",
+    "JUPYTER_ENTRY": "echarts/main",
+    "JS_FOLDER": "echarts",
+    "GITHUB_URL": "https://pyecharts.github.io/jupyter-echarts/echarts"
+}
