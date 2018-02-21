@@ -11,8 +11,6 @@ No action is required from pyecharts users. It is auto-installed in [pyecharts](
 1. echarts-gl
 1. echarts-liquidfill
 1. echarts-wordcloud
-1. echarts-china-cities-js: World, China, 28 province maps, 369 city maps.
-1. echarts-countries-js: 212 countries excluding China
 
 ## Installation to jupyter
 
@@ -38,11 +36,11 @@ For github hosted files, please use `https://pyecharts.github.io/jupyter-echarts
 	  }
 	</style>
   	<script src="https://pyecharts.github.io/jupyter-echarts/echarts/echarts.min.js"></script>
-	<script src="https://pyecharts.github.io/jupyter-echarts/echarts/jiang1_xi1/nan2_chang1.js"></script>
+	<script src="https://echarts-maps.github.io/echarts-china-cities-js/echarts-china-cities-js/jiang1_xi1_nan2_chang1.js"></script>
   </head>
   <body>
 	<div id='nan2_chang1' class='citymap'></div>
-	<script src='https://pyecharts.github.io/echarts-china-cities-js/demo.js'></script>
+	<script src='https://echarts-maps.github.io/echarts-china-cities-js/demo.js'></script>
 	<script>
 	  make_city('南昌', 'nan2_chang1');
 	</script>
@@ -50,7 +48,7 @@ For github hosted files, please use `https://pyecharts.github.io/jupyter-echarts
 </html>
 ```
 
-![Usage with echarts](https://pyecharts.github.io/echarts-china-cities-js/nanchang.png)
+![Usage with echarts](https://echarts-maps.github.io/echarts-china-cities-js/nanchang.png)
 
 ## Development
 
@@ -74,30 +72,3 @@ You will then obtain all echarts libraries in echarts folder.
 
 This bundling code is MIT license
 The echarts libraries are under BSD-3 license of Baidu Inc.
-
-
-### City maps License
-
-The geojson files are downloaded from AMap.com(高德地图) via [echarts-map-tool](http://ecomfe.github.io/echarts-map-tool/),
-hence are subjected to AMap's [service and content license](https://lbs.amap.com/home/terms/).
-
-**No content right** have been transferred to you and you shall **engage AMap.com** before
-making commercial applications using the files in this package. No Liability nor Guarantee were
-given for any error or flaws in the downloaded files.
-
-#### Free usage instructions
-
-Similiar to google's map data, it is free as long as the public's access to your files
-are free. 
-
-This bundling code(makedemo.py) is MIT license.
-
-
-#### Exception on the map license
-
-1. Taiwan map, is taken from [natural earth](http://www.naturalearthdata.com/about/terms-of-use/) and hence is
-in public domain. Again, No Liability nor Guarantee were given for any error or flaws by Natural Earth or by
-this project.
-
-2. Diaoyudao map, is drawn using [geojson.io](geojson.io) and is in public domain. No Liability nor
-Guarantee were given for any error or flaws by this project.
