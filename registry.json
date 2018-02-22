@@ -1,5 +1,10 @@
 {
-    "FILE_MAP": {},
+    "FILE_MAP": {
+        "echarts": "echarts.min",
+        "echartsgl": "echarts-gl.min",
+        "liquidfill": "echarts-liquidfill.min",
+        "wordcloud": "echarts-wordcloud.min"
+    },
     "PINYIN_MAP": {},
     "JUPYTER_URL": "/nbextensions/echarts",
     "JUPYTER_ENTRY": "echarts/main",

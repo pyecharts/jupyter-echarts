@@ -25,7 +25,7 @@ FILE_MAP = {
 
 gulp.task("configuration", function () {
   obj = {};
-  obj.FILE_MAP = {};
+  obj.FILE_MAP = FILE_MAP;
   obj.PINYIN_MAP = {};
   obj.JUPYTER_URL = '/nbextensions/echarts';
   obj.JUPYTER_ENTRY = 'echarts/main';
