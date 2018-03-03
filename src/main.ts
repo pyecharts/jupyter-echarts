@@ -1,5 +1,5 @@
-var version = '1.3.7';
+var version = '1.4.0';
 
 export function load_ipython_extension() {
-    console.log("jupyter-echarts " + version + " (echarts 3.6.2) has been loaded");
+    console.log("jupyter-echarts " + version + " (echarts 4.0.4) has been loaded");
 }
