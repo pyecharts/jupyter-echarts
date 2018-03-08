@@ -7,7 +7,6 @@ const path = require("path");
 var tsProject = ts.createProject("tsconfig.json");
 var minify = require("gulp-minify");
 var rename = require('gulp-rename');
-var maker = require("echarts-mapmaker/src/maker");
 
 FILES = [
     './node_modules/echarts/dist/echarts.min.js',
