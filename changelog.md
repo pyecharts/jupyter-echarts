@@ -1,6 +1,14 @@
 # Change log
 
-## 1.4.0 - unreleased
+## 1.4.1 - 28.07.2018
+
+### Updated
+
+    * echarts 4.0.4 -> 4.1.0
+    * echarts-gl 1.1.0 -> 1.1.1
+    * echarts-liquidfill 2.0.0 -> 2.0.1
+
+## 1.4.0 - 02.2018 
 
 ### Updated
     * echarts 3.6.2 -> 4.0.4
@@ -8,12 +16,12 @@
     * echarts-liquidfill 1.0.5 -> 2.0.0
     * echarts-wordcloud 1.1.0 -> 1.1.2
 
-## 1.3.7 - 23.02.2017
+## 1.3.7 - 23.02.2018
 
 ### Removed
 1. all map js files.
 
-## 1.3.6 - 03.02.2017
+## 1.3.6 - 03.02.2018
 
 ###Added
 
